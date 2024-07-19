@@ -1,0 +1,858 @@
+@charset "UTF-8";
+/* Todas las clases están desarrolladas en ORDEN ALFABETICO */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"); /* Fuente importada de Google */
+@font-face {
+  font-family: "CarterOne-Regular";
+  src: url("../font/CarterOne-Regular.ttf"); /* Fuente almacenada en forma local */
+}
+@font-face {
+  font-family: "Italianno-Regular";
+  src: url("../font/Italianno-Regular.ttf"); /* Fuente almacenada en forma local */
+}
+a:link, a:visited, a:active {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  height: 60px;
+  width: 100%;
+  margin-top: 300px;
+  margin-bottom: 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+.artIzquierdo {
+  width: 60%;
+}
+
+.artAcerca {
+  width: 80%;
+}
+
+.boton {
+  font-family: "CarterOne-Regular", cursive; /* Fuente almacenada en forma local */
+  font-size: 20px;
+  font-weight: bold;
+  background-image: radial-gradient(circle, #006400, #00CC00);
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: white;
+}
+.boton:hover {
+  background-image: radial-gradient(circle, #00CC00, #006400);
+  color: #dfd9d9;
+}
+
+.boton__ubicacion {
+  font-family: "CarterOne-Regular", cursive; /* Fuente almacenada en forma local */
+  font-size: 16px;
+  color: gray;
+}
+
+.contactoFormularioBotones input {
+  font-family: "CarterOne-Regular", cursive; /* Fuente almacenada en forma local */
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #006400;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: white;
+}
+
+.contactoFormularioMensaje {
+  width: 500px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+
+.contactoFormularioMensaje textarea {
+  width: 100%;
+  color: gray;
+  font-size: 20px;
+}
+
+.contactoFormularioNombres {
+  width: 500px;
+  color: gray;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+.contactoFormularioNombres::placeholder {
+  font-size: 20px;
+}
+.contactoFormularioNombres input {
+  width: 500px;
+  font-size: 20px;
+}
+
+.contenedorBotones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.contenedorFormulario__Contacto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: start;
+}
+
+.contenedorFoto__Inicial {
+  width: 40%;
+}
+
+.contenedorFotoPlantas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+.contenedorFotoPlantas p {
+  margin-top: 0px;
+}
+
+.contenedorFotoPlantas_Art {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorFotoPlantas_Art p {
+  margin-top: 20px;
+}
+
+.contenedorGrilla {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 120px 100px 430px 60px;
+}
+
+.contenedorGrilla__Galeria {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 120px 100px 100px auto 20px 60px;
+}
+
+.contenedorGrilla__NoIndex {
+  flex-grow: 1;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 120px 100px 100px auto 60px;
+}
+
+.contenedorGrilla__Tienda {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 120px 100px 100px 530px 60px;
+}
+
+.contenedorGrilla__Contacto {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 120px 90px 50px 24% 60% 60px;
+}
+
+.contenedorGrilla__Reproduccion {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 120px 100px 100px auto 80px 60px;
+}
+
+.contenedorMensaje__Contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.contenedorMensaje__Inicial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+
+.contenedorTituloPagina {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.esquemaAuxiliar {
+  width: 200px;
+}
+
+.formato_notas {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.fotoArbolDeLuz {
+  width: 300px;
+  height: 300px;
+}
+
+.fotoCultivando, .fotoJardines__Ubicacion {
+  width: 317px;
+  height: 317px;
+  background-color: #006400;
+  border: 1px;
+  border-radius: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding: 2px;
+  color: white;
+}
+.fotoCultivando:hover, .fotoJardines__Ubicacion:hover {
+  transform: scale(1.15, 1.15);
+}
+
+.fotoJardines {
+  width: 317px;
+  height: 317px;
+  background-color: #006400;
+  border: 1px;
+  border-radius: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding: 2px;
+  color: white;
+}
+.fotoJardines:hover {
+  transform: scale(1.15, 1.15);
+}
+
+.fotoNoticias__SecretGarden {
+  width: 500;
+  height: 317px;
+  background-color: #006400;
+  border: 1px;
+  border-radius: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding: 2px;
+  color: white;
+}
+.fotoNoticias__SecretGarden:hover {
+  transform: scale(1.15, 1.15);
+}
+
+.fotoPlantas {
+  width: 170px;
+  height: 170px;
+  background-color: #006400;
+  border: 1px;
+  border-radius: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding: 2px;
+  color: white;
+}
+.fotoPlantas:hover {
+  transform: scale(2, 2);
+}
+
+.logo {
+  width: 110px;
+  height: 110px;
+}
+
+.logo__titulo {
+  font-family: "Playfair Display", serif; /* Fuente importada de Google */
+  font-size: 20px;
+  font-weight: lighter;
+  color: gray;
+  display: inline;
+  margin-left: 50px;
+  margin-top: 80px;
+}
+
+.mapaDelSitio {
+  margin-left: 40px;
+}
+
+.mensajeInicial {
+  font-family: "Italianno-Regular"; /* Fuente almacenada en forma local */
+  color: gray;
+  font-size: 40px;
+}
+
+.mensajeContacto {
+  width: 580px;
+  font-family: "Italianno-Regular"; /* Fuente almacenada en forma local */
+  font-weight: lighter;
+  color: gray;
+  font-size: 36px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 50px;
+}
+
+.menuDesktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.menuMobile {
+  display: none;
+}
+
+.pasoAnterior {
+  font-size: 30px;
+  margin-left: 50px;
+  text-align: left;
+}
+
+.pasoSiguiente {
+  font-size: 30px;
+  margin-right: 50px;
+  text-align: right;
+}
+
+.pie {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.pie a {
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+  margin-right: 60px;
+}
+.pie img {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}
+.pie p {
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+  margin-right: 60px;
+  margin-left: 20px;
+}
+
+.reproduccionFoto__Pasos {
+  width: 300px;
+  height: 300px;
+  background-color: #006400;
+  border: 1px;
+  border-radius: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding: 2px;
+  color: white;
+}
+.reproduccionFoto__Pasos:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.textoReproduccion {
+  width: 500px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.tituloPagina__NoIndex {
+  font-size: 48px;
+  font-family: "Italianno-Regular";
+  font-weight: bold;
+  color: darkgreen;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.titPag__IconoBusq {
+  font-size: 24px;
+  font-family: "Italianno-Regular";
+  font-weight: bold;
+  color: blue;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.videoJardines__Ubicacion {
+  width: 400px;
+  height: 230px;
+  background-color: #006400;
+  border: 1px;
+  border-radius: 20px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-align: center;
+  padding: 2px;
+  color: white;
+}
+.videoJardines__Ubicacion:hover {
+  transform: scale(1.2, 1.2);
+}
+
+/*.videoJardines {
+    @extend .videoJardines__Ubicacion;     /* uso de @extend en sass */
+/*    &:hover{
+        transform: scale(1.1,1.1);
+    }
+}*/
+@media (min-width: 400px) and (max-width: 799px) {
+  footer {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .boton {
+    font-size: 10px;
+  }
+  .contactoFormularioBotones input {
+    font-size: 10px;
+  }
+  .contactoFormularioMensaje {
+    margin-left: 5px;
+    width: 240px;
+  }
+  .contactoFormularioMensaje textarea {
+    width: 240px;
+    font-size: 20px;
+  }
+  .contactoFormularioMensaje ::placeholder {
+    font-size: 10px;
+  }
+  .contactoFormularioNombres {
+    margin-left: 5px;
+    width: 240px;
+  }
+  .contactoFormularioNombres input {
+    width: 100%;
+  }
+  .contactoFormularioNombres::placeholder {
+    font-size: 10px;
+  }
+  .contenedorFotoPlantas {
+    margin-left: 0px;
+  }
+  .contenedorFotoPlantas img {
+    width: 300px;
+    height: 190px;
+  }
+  .contenedorGrilla {
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: 120px 60px auto 60px;
+  }
+  .contenedorGrilla__NoIndex {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 120px 100px 100px auto 60px;
+  }
+  .contenedorGrilla__Contacto {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 120px 100px 100px 24% auto 60px;
+  }
+  .esquemaAuxiliar {
+    width: 140px;
+  }
+  .fotoArbolDeLuz {
+    width: 120px;
+    height: 120px;
+  }
+  .fotoJardines:hover {
+    width: 154px;
+    height: 154px;
+  }
+  .fotoNoticias__SecretGarden {
+    width: 300px;
+    height: 190px;
+    background-color: #006400;
+    border: 1px;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+  }
+  .fotoNoticias__SecretGarden:hover {
+    transform: scale(1.15, 1.15);
+  }
+  .fotoPlantas {
+    width: 170px;
+    height: 170px;
+    background-color: #006400;
+    border: 1px;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+  }
+  .fotoPlantas:hover {
+    transform: scale(1.4, 1.4);
+  }
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .logo__titulo {
+    font-size: 16px;
+    margin-left: 25px;
+    margin-top: 40px;
+  }
+  .mapaDelSitio {
+    margin-left: 20px;
+  }
+  .mensajeInicial {
+    font-size: 30px;
+    color: black;
+  }
+  .mensajeContacto {
+    width: 240px;
+    margin-left: 5px;
+    font-size: 30px;
+    color: black;
+  }
+  .menuDesktop {
+    display: none;
+  }
+  .menuMobile {
+    display: inline-flex;
+    margin-left: 50px;
+  }
+  .pasoAnterior {
+    font-size: 20px;
+    margin-left: 30px;
+    text-align: left;
+  }
+  .pasoSiguiente {
+    font-size: 20px;
+    margin-right: 20px;
+    text-align: right;
+  }
+  .pie {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .pie a {
+    font-size: 10px;
+    margin-top: 5px;
+    margin-right: 30px;
+  }
+  .pie img {
+    margin-top: 5px;
+    width: 15px;
+    height: 15px;
+  }
+  .pie p {
+    font-size: 10px;
+    margin-top: 5px;
+    margin-right: 30px;
+    margin-left: 10px;
+  }
+  .reproduccionFoto__Pasos {
+    width: 250px;
+    height: 250px;
+    background-color: #006400;
+    border: 1px;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+  }
+  .reproduccionFoto__Pasos:hover {
+    transform: scale(1.2, 1.2);
+  }
+  .textoReproduccion {
+    width: 360px;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+  }
+  .videoJardines__Ubicacion {
+    width: 300px;
+    height: 170px;
+    background-color: #006400;
+    border: 1px;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+  }
+  .videoJardines__Ubicacion:hover {
+    transform: scale(1.2, 1.2);
+  }
+  /*    .videoJardines {
+          @extend .videoJardines__Ubicacion;     /* uso de @extend en sass */
+  /*        &:hover{
+              transform: scale(1.1,1.1);
+          }
+      }*/
+}
+@media (max-width: 399.9px) {
+  footer {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .boton {
+    font-size: 10px;
+  }
+  .contactoFormularioBotones {
+    margin-left: 10px;
+  }
+  .contactoFormularioBotones input {
+    font-size: 10px;
+  }
+  .contactoFormularioMensaje {
+    width: 200px;
+  }
+  .contactoFormularioMensaje textarea {
+    width: 200px;
+    font-size: 10px;
+  }
+  .contactoFormularioMensaje ::placeholder {
+    font-size: 10px;
+  }
+  .contactoFormularioNombres {
+    width: 200px;
+  }
+  .contactoFormularioNombres input {
+    width: 100%;
+  }
+  .contactoFormularioNombres::placeholder {
+    font-size: 10px;
+  }
+  .contenedorBotones {
+    justify-content: start;
+    margin-left: 10px;
+  }
+  .contenedorFotoPlantas {
+    margin-left: 0px;
+  }
+  .contenedorFotoPlantas img {
+    width: 140px;
+    height: 90px;
+  }
+  .contenedorGrilla {
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: 120px 60px auto 60px;
+  }
+  .contenedorGrilla__NoIndex {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 120px 100px 100px auto 60px;
+  }
+  .contenedorGrilla__Contacto {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 120px 60px 60px 30% auto 100px;
+  }
+  .contenedorMensaje__Contacto {
+    margin-top: 20px;
+    margin-left: 1cqh;
+  }
+  .contenedorTituloPagina {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0px;
+  }
+  .esquemaAuxiliar {
+    width: 100px;
+  }
+  .fotoArbolDeLuz {
+    width: 120px;
+    height: 120px;
+  }
+  .fotoCultivando, .fotoJardines__Ubicacion {
+    width: 217px;
+    height: 217px;
+    background-color: #006400;
+    border: 1px;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+  }
+  .fotoCultivando:hover, .fotoJardines__Ubicacion:hover {
+    transform: scale(1.15, 1.15);
+  }
+  /*    .fotoJardines {
+          @extend .fotoJardines__Ubicacion;     /* uso de @extend en sass */
+  /*        &:hover {
+          transform: scale(1.15,1.15);
+          }
+      }*/
+  .fotoJardines:hover {
+    width: 154px;
+    height: 154px;
+  }
+  .fotoPlantas {
+    width: 170px;
+    height: 170px;
+    background-color: #006400;
+    border: 1px;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+  }
+  .fotoPlantas:hover {
+    transform: scale(1.4, 1.4);
+  }
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .logo__titulo {
+    font-size: 16px;
+    margin-left: 25px;
+    margin-top: 40px;
+  }
+  .mapaDelSitio {
+    margin-left: 3px;
+  }
+  .mensajeInicial {
+    font-size: 30px;
+    color: black;
+  }
+  .mensajeContacto {
+    width: 240px;
+    margin-left: 5px;
+    font-size: 30px;
+    color: black;
+  }
+  .menuDesktop {
+    display: none;
+  }
+  .menuMobile {
+    display: inline-flex;
+    margin-left: 50px;
+  }
+  .pasoAnterior {
+    font-size: 16px;
+    margin-left: 15px;
+    text-align: left;
+  }
+  .pasoSiguiente {
+    font-size: 16px;
+    margin-right: 15px;
+    text-align: right;
+  }
+  .pie {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .pie a {
+    font-size: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .pie img {
+    margin-top: 5px;
+    width: 15px;
+    height: 15px;
+  }
+  .pie p {
+    font-size: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .reproduccionFoto__Pasos {
+    width: 200px;
+    height: 200px;
+    background-color: #006400;
+    border: 1px;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+  }
+  .reproduccionFoto__Pasos:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .textoReproduccion {
+    width: 180px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+    text-align: justify;
+  }
+  .tituloPagina__NoIndex {
+    justify-content: center;
+    font-size: 36px;
+  }
+  .videoJardines {
+    width: 200px;
+    height: 115px;
+    background-color: #006400;
+    border: 1px;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+  }
+  .videoJardines:hover {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

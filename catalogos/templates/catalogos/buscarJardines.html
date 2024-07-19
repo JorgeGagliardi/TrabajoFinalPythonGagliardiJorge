@@ -1,0 +1,19 @@
+{% extends "catalogos/index.html" %}
+    {% load static %}
+    {% block contenido %}
+        <div class="contenedorTituloPagina">
+            <h2 class="tituloPagina__NoIndex">Buscar Jardines</h2>         <!-- Título de la página -->
+            <section class="contenedorMensaje__Contacto">
+                <div>
+                    <h2 class="mensajeContacto"> </h2>
+                </div>
+            </section>
+        </div>
+        <form action="{% url 'encontrarJardines' %}" method="get">
+            {% csrf_token %}
+            <table>
+                <p>Ingrese el nombre del jardín a buscar: <input type="text" name="buscar" ig="buscar"></p>
+            </table>
+            <input type="submit" value="Buscar">
+        </form>
+    {% endblock contenido %}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre la belleza de la naturaleza con Espacio Jardín.
+    Nuestro sitio web ofrece una amplia gama de información sobre jardinería y plantas.
+    Desde consejos sobre cómo cuidar tus plantas hasta las últimas tendencias en diseño de jardines,
+    tenemos todo lo que necesitas para crear tu propio oasis verde.">
+    <meta name="keywords" content="Jardinería, Plantas, diseño de jardines, Paisajismo, cuidado de las plantas,  
+    oasis verde, Naturaleza, Vida al aire libre, Sostenibilidad, pasión">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Espacio Jardin</title>
+</head>
+<body>
+    <div class="contenedorGrilla__NoIndex">
+        <header>
+            <a href="{% url 'home' %}" target="_self">
+            <img class="logo" src="{% static 'assets/logo.jpg' %}" alt="Logo Espacio Jardin" /></a>  <!-- Logo y título principal -->
+            <h1 class="logo__titulo">ESPACIO JARDÍN</h1>
+        </header>
+        <nav>
+            <div class="menuMobile">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Temas de interés
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'nuestrasPlantas' %}">Nuestras Plantas</a></li>
+                        <li><a class="dropdown-item" href="{% url 'jardines' %}">Jardines</a></li>
+                        <li><a class="dropdown-item" href="{% url 'cultivando' %}">Cultivando</a></li>
+                        <li><a class="dropdown-item" href="{% url 'comentarios' %}">Comentarios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menuDesktop">
+                <a href="{% url 'nuestrasPlantas' %}"><p class="boton">NUESTRAS PLANTAS</p></a> <!-- Menú -->
+                <a href="{% url 'jardines' %}"><p class="boton">JARDINES</p></a>                <!-- Menú -->
+                <a href="{% url 'cultivando' %}"><p class="boton">CULTIVANDO</p></a>            <!-- Menú -->
+                {% if user.is_authenticated %}
+                    <a href="{% url 'comentarios' %}"><p class="boton">COMENTARIOS</p></a>
+                    <p style="color:green">[{{user.first_name}} {{user.last_name}}]</p>
+                    <div class="text-center">
+                        <a href="{% url 'agregar_avatar' %}"><img src="{{request.session.avatar}}" height="40px" weight="40px" alt="mi foto"></a>
+                    </div>
+<!--                <p style="color:green">[{{user.username}}]</p>  -->
+                    <a class="btn btn-success" href="{% url 'perfil' %}">Perfil</a>
+
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Finalización de sesión</button>
+                    </form>
+<!--                    <a class="btn btn-primary" href="">Finalización de sesión</a>   -->
+                {% else %}
+                    <a class="btn btn-primary" href="{% url 'login' %}">Inicio sesión</a>
+                    <a class="btn btn-success" href="{% url 'registro' %}">Registrarse</a>                               <!-- Menú -->
+                {% endif %}
+            </div>
+        </nav>
+        {% block contenido %}
+        <div class="contenedorTituloPagina">
+            <h2 class="tituloPagina__NoIndex"> </h2>          <!-- Título de la página -->
+        </div>
+        <section class="contenedorMensaje__Inicial">                                          <!-- MENSAJE DE BIENVENIDA -->
+            <article class="artIzquierdo">
+                <p class="mensajeInicial">Un lugar donde lo importante es el amor por la naturaleza, las plantas y los jardines.</p>
+                <p class="mensajeInicial">Deseamos compartir este espacio con personas apasionadas por estos temas.</p>
+                <p class="mensajeInicial">Iniciá sesión y podrás dejarnos tus comentarios.</p>
+            </article>
+            <article class="contenedorFoto__Inicial">
+                <img class="fotoArbolDeLuz" src="{% static 'assets/arbolDeLuz.jpg' %}" alt="Arbol de luz" />
+            </article>
+        </section>
+        {% endblock contenido %}
+        <footer>                                                              <!-- Pie de página -->
+            <div class="pie">
+                <p>Seguinos en:</p>
+                <img src="{% static 'assets/logoInstagram.gif' %}" alt="Instagram" />
+                <a href="http://www.instagram.com/_espaciojardin">@_espaciojardin</a>
+<!--            <img src="{% static 'assets/mail.gif' %}" alt="Mail" />
+                <a href="{% url 'contacto' %}">info@espaciojardin.ar</a>   -->
+                <a class="mapaDelSitio" href="{% url 'acerca' %}">Acerca</a>
+                <a class="mapaDelSitio" href="{% url 'mapaDelSitio' %}">Mapa sitio</a>
+            </div>
+        </footer>
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

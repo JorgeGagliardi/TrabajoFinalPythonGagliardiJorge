@@ -1,0 +1,16 @@
+{% extends "catalogos/index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <div class="contenedorTituloPagina">
+        <h2 class="tituloPagina__NoIndex">Finalización de sesión</h2>         <!-- Título de la página -->
+    </div>
+    {% csrf_token %}
+
+    <h4>
+        <p style="color:red" align="center">Se ha deslogueado exitosamente</p>
+    </h4>
+
+{% endblock contenido %}

@@ -1,0 +1,24 @@
+{% extends "catalogos/index.html" %}
+    {% load static %}
+    {% block contenido %}
+        <div class="contenedorTituloPagina">
+            <h2 class="tituloPagina__NoIndex">Comentarios</h2>         <!-- Título de la página -->
+            <section class="contenedorMensaje__Contacto">
+                <div>
+                    <h2 class="mensajeContacto">Si admirás los jardines y las plantas, si las comercializás</h2>
+                    <h2 class="mensajeContacto">o las reproducís, envianos tus comentarios.</h2>
+                </div>
+                <div>    
+                    <h2 class="mensajeContacto">Queremos invitarte a formar parte de una comunidad</h2>
+                    <h2 class="mensajeContacto">apasionada por estos temas.</h2>
+                </div>
+            </section>
+        </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <input type="submit" value="Guardar">
+        </form>
+    {% endblock contenido %}

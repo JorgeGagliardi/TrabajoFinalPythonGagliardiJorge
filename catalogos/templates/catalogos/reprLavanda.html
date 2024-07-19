@@ -1,0 +1,15 @@
+{% extends "catalogos/index.html" %}
+    {% load static %}
+    {% block contenido %}
+        <div class="contenedorTituloPagina">
+            <h2 class="tituloPagina__NoIndex">Reproducción de lavanda</h2>         <!-- Título de la página -->
+        </div>
+        <section class="contenedorFotoPlantas">     <!-- Fotos de plantas con sus nombres -->
+            {% for c in reprLavanda %}
+                <article class="contenedorFotoPlantas_Art">
+                    <p><b>{{ c.paso_numero }} {{c.paso_nombre}}.</b> {{c.paso_descripcion}}</p>
+                    <img class="fotoCultivando" src="{% static 'assets/' %}{{c.paso_image}}" alt="{{ c.paso_nombre }}" />
+                </article>
+            {% endfor %}
+        </section>
+    {% endblock contenido %}

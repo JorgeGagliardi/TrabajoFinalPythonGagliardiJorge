@@ -1,0 +1,18 @@
+{% extends "catalogos/index.html" %}
+
+{% load static %}
+{% block contenido %}
+
+    <div class="contenedorTituloPagina">
+        <h2 class="tituloPagina__NoIndex">Avatar</h2>         <!-- Título de la página -->
+    </div>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Actualizar Avatar">
+    </form>
+
+{% endblock contenido %}

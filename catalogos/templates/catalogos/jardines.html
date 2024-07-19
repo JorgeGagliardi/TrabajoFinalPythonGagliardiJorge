@@ -1,0 +1,16 @@
+{% extends "catalogos/index.html" %}
+    {% load static %}
+    {% block contenido %}
+        <div class="contenedorTituloPagina">
+            <a class="titPag__IconoBusq" href="{% url 'buscarJardines' %}"><i class="fa-solid fa-magnifying-glass" title="Buscar jardines"></i></a>
+            <h2 class="tituloPagina__NoIndex">Jardines</h2>         <!-- Título de la página -->
+        </div>
+        <section class="contenedorFotoPlantas">     <!-- Fotos de plantas con sus nombres -->
+            {% for c in jardines %}
+                <article class="contenedorFotoPlantas_Art">
+                    <img class="fotoPlantas" src="{% static 'assets/' %}{{c.image}}" alt="{{ c.nombre }}" />
+                    <p>{{ c.nombre }}</p>
+                </article>
+            {% endfor %}
+        </section>
+    {% endblock contenido %}

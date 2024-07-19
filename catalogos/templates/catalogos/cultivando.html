@@ -1,0 +1,20 @@
+    {% extends "catalogos/index.html" %}
+    {% load static %}
+    {% block contenido %}
+        <div class="contenedorTituloPagina">
+            <a class="titPag__IconoBusq" href="{% url 'buscarCultivos' %}"><i class="fa-solid fa-magnifying-glass" title="Buscar cultivos"></i></a>
+            <h2 class="tituloPagina__NoIndex">Cultivando</h2>         <!-- Título de la página -->
+            <p class="mensajeContacto">Clickeá sobre la imagen de la que deseás conocer como reproducirla.</p>
+        </div>
+        <section class="contenedorFotoPlantas">     <!-- Fotos de plantas con sus nombres -->
+            {% for c in cultivando %}
+                <article class="contenedorFotoPlantas_Art">
+                    
+                    <a href="{% url c.nombre %}">
+                    <img class="fotoCultivando" src="{% static 'assets/' %}{{c.image}}" alt="{{ c.nombre }}" /></a>
+                    <p>Reproducción de {{ c.nombre }}</p>
+                </article>
+            {% endfor %}
+        </section>
+    {% endblock contenido %}
+

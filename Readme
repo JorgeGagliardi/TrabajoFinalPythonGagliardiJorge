@@ -1,0 +1,29 @@
+ESPACIO JARDÍN
+Objetivo.
+Permitir a los visitantes conocer nuestras plantas y su cultivo.
+Ofrecer información sobre jardines argentinos.
+
+El sitio web ofrece una amplia gama de información sobre jardinería y plantas.
+Desde consejos sobre cómo cuidar las plantas hasta las últimas tendencias en diseño de jardines,
+tiene todo lo que se necesita para crear un propio oasis verde.
+
+Además, trata de crear una comunidad con gustos y placeres compartidos.
+
+El sitio está abierto al público en general. Solo se pide el inicio de sesión a
+aquellas personas que deseen dejar comentarios y ser partícipes de la comunidad.
+
+Palabras claves relacionadas:
+Jardinería, Plantas, Diseño de jardines, Paisajismo, Cuidado de las plantas,  
+Oasis verde, Naturaleza, Vida al aire libre, Sostenibilidad, Pasión
+
+El sitio está realizado uniendo HTML, con CSS, SASS, JavaScript, Bootstrap, Python y Django.
+
+Funcionalidades.
+Permite consultar nuestras plantas, los jardines y los cultivos, en general y buscando por su nombre.
+Ofrece información sobre jardines argentinos.
+Muestra información sobre cultivo y reproducción de plantas con solo señalarla en nuestro catálogo.
+Permite dejar comentarios y expresar ideas afines con solo registrarse en el sitio e iniciar sesión.
+Es posible actualizar el perfil del visitante a través del tiempo.
+Da información sobre el sitio a visitar.
+Ofrece un mapa del sitio para ir a todos los lugares del sitio de una forma sencilla.
+Ofrece el vínculo con la red social Instagram relacionada con esta comunidad.

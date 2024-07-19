@@ -1,0 +1,19 @@
+{% extends "catalogos/index.html" %}
+    {% load static %}
+    {% block contenido %}
+        <div class="contenedorTituloPagina">
+            <h2 class="tituloPagina__NoIndex">Buscar Cultivos</h2>         <!-- Título de la página -->
+            <section class="contenedorMensaje__Contacto">
+                <div>
+                    <h2 class="mensajeContacto"> </h2>
+                </div>
+            </section>
+        </div>
+        <form action="{% url 'encontrarCultivos' %}" method="get">
+                {% csrf_token %}
+            <table>
+                <p>Ingrese el nombre del cultivo a buscar: <input type="text" name="buscar" ig="buscar"></p>
+            </table>
+            <input type="submit" value="Buscar">
+        </form>
+    {% endblock contenido %}

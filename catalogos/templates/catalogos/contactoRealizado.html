@@ -1,0 +1,49 @@
+{% extends "catalogos/index.html" %}
+
+{% load static %}
+{% block contenido %}
+    <div class="contenedorTituloPagina">
+        <h2 class="tituloPagina__NoIndex">Comentarios</h2>         <!-- Título de la página -->
+    </div>
+    <table>
+        <tr>
+            <td>
+                <a href="{% url 'contacto' %}" class="btn btn-primary btn-sm"><p>Agregar comentario</p>
+                    <i class="fa fa-plus fa-lg" title="Crear comentario"></i>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <thead>
+            <tr>
+<!--            <th>Id</th>    -->
+                <th>Nombre del contacto</th>
+                <th>Comentario</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in contactos %}
+                <tr>
+<!--                <td>{{c.id}}</td>   -->
+                    <td>{{c.apellido}}</td>
+                    <td>{{c.mensaje}}</td>
+                    <td>
+                        <a href="{% url 'contactoUpdate' c.id %}"
+                        class="btn btn-primary"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                            <i class="fa fa-edit fa-sm" title="Modificar comentario"></i>
+                        </a>
+                        <a
+                        href="{% url 'contactoDelete' c.id %}"
+                        class="btn btn-danger"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                            <i class="fa fa-trash fa-sm" title="Borrar comentario"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}

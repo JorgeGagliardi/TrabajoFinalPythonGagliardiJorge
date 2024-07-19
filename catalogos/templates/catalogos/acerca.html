@@ -1,0 +1,20 @@
+{% extends "catalogos/index.html" %}
+    {% load static %}
+    {% block contenido %}
+
+        <div class="contenedorTituloPagina">
+            <h2 class="tituloPagina__NoIndex">Acerca...</h2>         <!-- Título de la página -->
+        </div>
+ 
+        <section class="contenedorMensaje__Inicial">                                          <!-- MENSAJE DE BIENVENIDA -->
+            <article class="artAcerca">
+                <h1>Espacio Jardín...</h1>
+                <p class="mensajeInicial"> intenta ser un lugar donde se puede apreciar y compartir el placer por las plantas y la naturaleza.</p>
+                <p class="mensajeInicial">Podrás conocerlas y como cultivarlas. También podrás tener información sobre jardines argentinos.</p>
+                <p class="mensajeInicial">El sitio fue realizado uniendo HTML, CSS, SASS, Javascript, Bootstrap, Python y Django.</p>
+                <p class="mensajeInicial">La primera versión del sitio fue publicada en julio de 2024.</p>
+                <p class="mensajeInicial">También podrás seguirnos en Instagram.</p>
+            </article>
+        </section>
+        
+    {% endblock contenido %}
